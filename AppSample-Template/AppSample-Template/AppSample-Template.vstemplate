@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+  <TemplateData>
+    <Name>AppSample-Template</Name>
+    <Description>AppSample-Template</Description>
+    <Icon>__TemplateIcon.ico</Icon>
+    <ProjectType>CSharp</ProjectType>
+    <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
+    <SortOrder>1000</SortOrder>
+    <TemplateID>ded6bd63-ec08-4a7c-a466-efd8d604be9a</TemplateID>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>AppSample-Template</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+  </TemplateData>
+  
+  <TemplateContent>
+    <ProjectCollection>
+      <ProjectTemplateLink ProjectName="$myprojectnameparent$-Cloud">
+        ProjectTemplate-Cloud\MyTemplate.vstemplate
+      </ProjectTemplateLink>
+      <ProjectTemplateLink ProjectName="$myprojectnameparent$-Code">
+        ProjectTemplate-Code\MyTemplate.vstemplate
+      </ProjectTemplateLink>
+      <!--
+      <ProjectTemplateLink ProjectName="$myprojectnameparent$-Tests">
+        ProjectTemplate-Tests\MyTemplate.vstemplate
+      </ProjectTemplateLink>
+-->
+    </ProjectCollection>
+  </TemplateContent>  
+
+  <WizardExtension>
+    <Assembly>CustomWizard, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=c031271d4eab351e</Assembly>
+    <FullClassName>CustomWizard.CustomWizard</FullClassName>
+  </WizardExtension>    
+  
+</VSTemplate>
